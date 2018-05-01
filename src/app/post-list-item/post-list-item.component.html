@@ -1,15 +1,15 @@
 <li [ngClass]="{
-  'list-group-item postListItem': true,
+  'list-group-item ': true,
   'list-group-item-success': post.loveIts > 0,
   'list-group-item-danger': post.loveIts < 0 }"
 >
 <article>
   <header>
-    <h1 class="postTitle">{{ post.title}}</h1>
-    <div class="postDate">Posté le {{ post.createdAt | date : "dd/MM/y à H:m"}}</div>
+    <h1 class="">{{ post.title}}</h1>
+    <div class="">Posté le {{ post.createdAt | date : "dd/MM/y à H:m"}}</div>
   </header>
   <section>
-    <div class="postContent">{{ post.content}}</div>
+    <div class="">{{ post.content}}</div>
   </section>
   <footer>
     <aside>
