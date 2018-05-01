@@ -1,29 +1,29 @@
 <li [ngClass]="{
-  'list-group-item ': true,
+  'list-group-item': true,
   'list-group-item-success': post.loveIts > 0,
-  'list-group-item-danger': post.loveIts < 0 }"
->
-<article>
-  <header>
-    <h1 class="">{{ post.title}}</h1>
-    <div class="">Posté le {{ post.createdAt | date : "dd/MM/y à H:m"}}</div>
-  </header>
-  <section>
-    <div class="">{{ post.content}}</div>
-  </section>
-  <footer>
-    <aside>
-      <button class="btn btn-success" (click)="setLoveIts(1)">J'aime</button>
-      <button class="btn btn-danger" (click)="setLoveIts(-1)">Je n'aime pas</button>
-    </aside>
-    <aside [ngClass]="{
-      'postLoveCount' : true,
-      'postPositiveLoveCount' : post.loveIts > 0,
-      'postNegativeLoveCount' : post.loveIts < 0}"
-    >
-      {{ post.loveIts }}
-    </aside>
-  </footer>
-</article>
+  'list-group-item-danger': post.loveIts < 0 }">
+  
+  <article>
+    <header>
+      <h1>{{ post.title}}</h1>
+      <div>Posté le {{ post.createdAt | date : "dd/MM/y à H:m"}}</div>
+    </header>
+    <section>
+      <div>{{ post.content}}</div>
+    </section>
+    <footer>
+      <aside>
+        <button class="btn btn-success" (click)="setLoveIts(1)">J'aime</button>
+        <button class="btn btn-danger" (click)="setLoveIts(-1)">Je n'aime pas</button>
+      </aside>
+      <aside [ngClass]="{
+        'postLoveCount' : true,
+        'postPositiveLoveCount' : post.loveIts > 0,
+        'postNegativeLoveCount' : post.loveIts < 0}"
+      >
+        {{ post.loveIts }}
+      </aside>
+    </footer>
+  </article>
 
 </li>
